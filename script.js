@@ -52,7 +52,7 @@ const handleSortByViews = () => {
                 ${video.others.views} views
             </p>
             <p>
-            ${video.others.posted_date} 
+            ${convertTime(video.others.posted_date)} 
             </p>
       </div>
     </div>`;
@@ -60,4 +60,38 @@ const handleSortByViews = () => {
         cardContainer.appendChild(div);
       });
     });
+};
+
+const convertTime = (time) => {
+	const timeNumber = parseInt(time);
+	let [years, months, days, hours, minutes, seconds] = [0, 0, 0, 0, 0, 0];
+	if (timeNumber > 0) seconds = timeNumber;
+	if (seconds >= 60) {
+		minutes = Math.floor(seconds / 60);
+		seconds %= 60;
+	}
+	if (minutes >= 60) {
+		hours = Math.floor(minutes / 60);
+		minutes %= 60;
+	}
+	if (hours >= 24) {
+		days = Math.floor(hours / 24);
+		hours %= 24;
+	}
+	if (days >= 30) {
+		months = Math.floor(days / 30);
+		days %= 30;
+	}
+	if (months >= 12) {
+		years = Math.floor(months / 12);
+		months %= 12;
+	}
+	const arr = [];
+	if (years) arr.push(`${years} years`);
+	if (months) arr.push(`${months} months`);
+	if (days) arr.push(`${days} days`);
+	if (hours) arr.push(`${hours} hours`);
+	if (minutes) arr.push(`${minutes} minutes`);
+	if (seconds) arr.push(`${seconds} seconds`);
+	return arr.join(" ");
 };
