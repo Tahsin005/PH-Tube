@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="icon" href="">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <header>
+        <div class="navbar bg-base-100">
+            <div class="navbar px-10 sm:flex sm:justify-between sm:p-2 sm:pt-8 sm:mb-8 block text-center md:px-10 md:flex md:justify-between md:p-2 md:pt-8 md:mb-8  lg:px-10 lg:flex lg:justify-between lg:p-2 lg:pt-8 lg:mb-8">
+              <div class="nav-logo">
+                <img src="./PHero-Tube/Logo.png" alt="">
+              </div>
+
+              <button onclick="handleSortByViews()" class=" btn bg-slate-700 text-white  block m-auto lg:m-0 mt-3 gap-3  lg:flex lg:gap-x-36 lg:mr-20 md:m-0 md:flex md:gap-x-36 md:mr-20 sm:m-0 sm:flex sm:gap-x-36 sm:mr-20">Sort By View</button>
+
+              <a class="btn btn-secodary" href="./blog.html">Blog</a>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section>
+            <div class="tab-container w-full">
+                <div id="tab-container" class="bg-slate-50 p-5  m-auto text-center flex justify-center gap-x-2">
+
+                </div>
+            </div>
+
+
+            <div id="card-container" class="grid grid-cols-1 gap-4 px-8 sm:grid sm:grid-cols-2 sm:gap-4 sm:px-8 md:grid md:grid-cols-2 md:gap-4 md:px-8 lg:grid lg:grid-cols-4 lg:gap-4 lg:px-8">
+
+            </div>
+
+        </section>
+
+
+        <section>
+            <div id="not-found-container" class="not-found w-full h-screen m-auto text-center mt-20 hidden">
+                <img class="block m-auto" src="./PHero-Tube/Icon.png" alt="" />
+                <p class="text-4xl text-black mt-10"> Oops!! Sorry, There is no content here</p>
+            </div>
+        </section>
+    </main>
+    
+
+
+
+    <!-- script  -->
+    <script src="./script.js"></script>
+</body>
+</html>
