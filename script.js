@@ -57,7 +57,7 @@ const handleCategorizedSection = async (categoryId) => {
                 <small>${
                   video.authors[0].verified
                     ? `<div>
-                        <img src="./PHero-Tube/verified.png" alt="">
+                        <img src="./resource/verified.png" alt="">
                     </div>`
                     : ""
                 }
@@ -129,7 +129,7 @@ const handleSortByViews = () => {
                 <small>${
                   video.authors[0].verified
                     ? `<div>
-                        <img src="./PHero-Tube/verified.png" alt="">
+                        <img src="./resource/verified.png" alt="">
                     </div>`
                     : ""
                 }
